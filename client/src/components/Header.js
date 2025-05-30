@@ -39,36 +39,25 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Account
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <Link className="dropdown-item" to="/login">
-                      Login
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/register">
-                      Register
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/admin">
-                      Admin Dashboard
-                    </Link>
-                  </li>
-                </ul>
+                
+                  <div className="dropdown">
+                    <button 
+                      className="btn btn-link nav-link dropdown-toggle" 
+                      type="button" 
+                      id="userDropdown" 
+                      data-bs-toggle="dropdown"
+                    >
+                      <i className="fas fa-user me-1"></i> Account
+                    </button>
+                    <ul className="dropdown-menu">
+                      <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                      <li><Link className="dropdown-item" to="/register">Register</Link></li>
+                      <li><hr className="dropdown-divider" /></li>
+                      <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
+                      <li><Link className="dropdown-item" to="/admin">Admin Panel</Link></li>
+                    </ul>
+                  </div>
+                
               </li>
             </ul>
           </div>
